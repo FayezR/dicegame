@@ -51,17 +51,18 @@ def main():
     # random seed makes the results deterministic
     # change the number to see different results
     #  or delete the line to make it change each time it is run
-    np.random.seed(1)
+    np.random.seed(3)
 
     game = DiceGame()
 
-    agent1 = AlwaysHoldAgent(game)
+    from main import MyAgent
+    agent1 = MyAgent(game)
     play_game_with_agent(agent1, game, verbose=True)
 
     print("\n")
 
-    agent2 = PerfectionistAgent(game)
-    play_game_with_agent(agent2, game, verbose=True)
+    # agent2 = PerfectionistAgent(game)
+    # play_game_with_agent(agent2, game, verbose=True)
 
 
 
